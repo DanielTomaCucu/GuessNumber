@@ -6,13 +6,12 @@ window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
 let recognition = new window.SpeechRecognition();
-console.log(recognition);
+
 // Start recognition and game
 recognition.start();
 
 //capture user speak
 function onSpeak(e){
-    console.log(e);
     const msg = e.results[0][0].transcript;
     writeMessage(msg);
     checkMessage(msg); 
